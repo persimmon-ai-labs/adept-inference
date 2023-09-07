@@ -11,9 +11,11 @@ The chat model is fine-tuned and is released under a CC-BY-NC 4.0 license.
 
 Base:
 https://axtkn4xl5cip.objectstorage.us-phoenix-1.oci.customer-oci.com/n/axtkn4xl5cip/b/adept-public-data/o/8b_base_model_release.tar
+md5sum: cd0320cba9efad9ccd18e9ec4d16ae1b
 
 Chat:
 https://axtkn4xl5cip.objectstorage.us-phoenix-1.oci.customer-oci.com/n/axtkn4xl5cip/b/adept-public-data/o/8b_chat_model_release.tar
+md5sum: 663aeace07269c44e90f4e8bcd07f32a
 
 Untar the model into its own directory via `tar -xvf 8b_base_model_release.tar` or `tar -xvf 8b_chat_model_release.tar`
 
@@ -42,7 +44,7 @@ curl '<address of server>/api' -X 'PUT' -H 'Content-Type: application/json; char
 Notes
 -----
 
-* The chat model is fine-tuned to expect inputs of the form: `human: {prompt}\n\nadept:`[^1]. To ensure best performance from this model, please use this format! You can see an example of this in the curl command above. To automatically wrap single-turn input prompts with this structure, you can modify the definition of `megatron/text_generation/api.py::generate_and_post_process` so that the default value for the argument `process_prompts_for_chat` is set to `True`. 
+* The chat model is fine-tuned to expect inputs of the form: `human: {prompt}\n\nadept:`[^1]. To ensure best performance from this model, please use this format! You can see an example of this in the curl command above. To automatically wrap single-turn input prompts with this structure, you can modify the definition of `megatron/text_generation/api.py::generate_and_post_process` so that the default value for the argument `process_prompts_for_chat` is set to `True`.
 * We are releasing the model with tensor parallelism of 1.  In this configuration, the model requires an 80GB GPU to run naively.
 It should be possible to fit the model on a 40GB card by removing the unused embeddings and reducing the maximum sequence length
 (at the top of `run_text_generation_server.py`).
