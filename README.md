@@ -49,4 +49,19 @@ It should be possible to fit the model on a 40GB card by removing the unused emb
 Quantization to 8-bit or lower would make also it fit with plenty of room to spare.
 * We included the `.vocab` file so you can browse the vocabulary in plain text - this file is otherwise unused.
 
+
+Citation
+--------
+
+If you use this model in your work, please use the following BibTeX citation:
+```bibtex
+@misc{persimmon-8b,
+  author = {Elsen, Erich and Odena, Augustus and Nye, Maxwell and Ta\c{s}\i{}rlar, Sa\u{g}nak and Dao, Tri and Hawthorne, Curtis and Moparthi, Deepak and Somani, Arushi},
+  title = {Releasing {Persimmon-8B}},
+  url = {https://www.adept.ai/blog/persimmon-8b},
+  year = {2023}
+}
+```
+
+
 [^1]: Subsequent inputs should have the form `human: {prompt}\n\nadept: {output}\n\nhuman: {follow_up}\n\nadept:`
