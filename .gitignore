@@ -1,0 +1,57 @@
+*.env
+
+.ruff_cache
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+*__pycache__*
+.mypy_cache/
+*.py[cod]
+*$py.class
+lm_cache
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+.next/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+env
+MANIFEST
+venv/
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Ignore swapfiles
+.*.swp
+.\#*
+
+# virtualenv
+.python-version
+
+# VSCode extension
+*.vsix
+
+# Environment variables
+.env
